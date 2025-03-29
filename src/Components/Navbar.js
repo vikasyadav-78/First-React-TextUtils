@@ -49,6 +49,6 @@ navbar.prototype = {
   about: PropTypes.string
 }
 navbar.defaultProps = {
-   title:"Default"  ,
-   about:"defaultAbout"  
+  title: "Default",
+  about: "defaultAbout"
 } 

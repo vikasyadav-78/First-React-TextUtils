@@ -5,12 +5,10 @@ import React, { useState } from 'react'
 export default function TextForm(props) {
     const [text, setText] = useState('');
     const handdleOnClick = () => {
-        console.log("Function is clicked")
         let newText = text.toUpperCase();
         setText(newText)
     }
     const handdleLoClick = () => {
-        console.log("Function is clicked")
         let newText = text.toLowerCase();
         setText(newText)
     }
@@ -19,6 +17,12 @@ export default function TextForm(props) {
     const handdleOnChange = (event) => {
         console.log("On change")
         setText(event.target.value)
+    }
+
+
+    const clearTextBtn = (event) => {
+        let clean = "";
+        setText(clean)
     }
 
 
@@ -32,6 +36,7 @@ export default function TextForm(props) {
                 </div>
                 <button className='btn btn-primary my-2' onClick={handdleOnClick}>Convert To UpparCase</button>
                 <button className='btn btn-primary ms-4' onClick={handdleLoClick}>Convert To Lowercase</button>
+                <button className='btn btn-primary ms-4' onClick={clearTextBtn}>Clear Form</button>
             </div>
 
             <div className='container my-4'>
