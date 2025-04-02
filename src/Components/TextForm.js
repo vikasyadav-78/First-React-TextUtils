@@ -7,10 +7,12 @@ export default function TextForm(props) {
     const handdleOnClick = () => {
         let newText = text.toUpperCase();
         setText(newText)
+        props.showAlert("Converted to uppercase !", "Success");
     }
     const handdleLoClick = () => {
         let newText = text.toLowerCase();
         setText(newText)
+        props.showAlert("Converted to lowercase !", "Success");
     }
 
 
@@ -23,17 +25,20 @@ export default function TextForm(props) {
     const clearTextBtn = (event) => {
         let clean = "";
         setText(clean)
+        props.showAlert("Clear text box !", "Success");
     }
 
     const handleCopy = () => {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copy all text !", "Success");
     }
 
     const handleExtraSpaces = () =>{
         let clearSpaces = text.split(/[ ] +/);
         setText(clearSpaces.join(" "));
+        props.showAlert("Clear extra spaces !", "Success");
     }
 
     return (
