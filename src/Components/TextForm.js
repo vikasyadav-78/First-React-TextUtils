@@ -38,11 +38,11 @@ export default function TextForm(props) {
 
     return (
         <>
-            <div className='container'>
+            <div className='container' style={{color : props.mode === 'dark' ? 'white' : '#042743'}}>
                 <h1>{props.heading}</h1>
                 <div className="mb-3">
                     {/* <label for="myBox" class="form-label">Example textarea/</label> */}
-                    <textarea className="form-control" value={text} onChange={handdleOnChange} id="myBox" rows="10"></textarea>
+                    <textarea className="form-control" value={text} onChange={handdleOnChange} style={{backgroundColor : props.mode === 'dark' ? 'gray' : 'white' , color: props.mode === 'dark' ? 'white' : '#042743'}} id="myBox" rows="10"></textarea>
                 </div>
                 <button className='btn btn-primary my-2' onClick={handdleOnClick}>Convert To UpparCase</button>
                 <button className='btn btn-primary ms-4' onClick={handdleLoClick}>Convert To Lowercase</button>
@@ -51,7 +51,7 @@ export default function TextForm(props) {
                 <button className='btn btn-primary ms-4' onClick={handleExtraSpaces}>Formet Text</button>
             </div>
 
-            <div className='container my-4'>
+            <div className='container my-4' style={{color : props.mode === 'dark' ? 'white' : '#042743'}}>
                 <h1>Your Text Summary</h1>
                 <p>{text.split(" ").length} words and {text.length} Characters</p>
                 <p>{0.008 * text.split(' ').length} Mintus read </p>
