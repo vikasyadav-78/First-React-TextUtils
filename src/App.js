@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import Alert from './Components/Alert';
 import About from './Components/About';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
+
 
 function App() {
   const [mode, setMode] = useState('light'); 
