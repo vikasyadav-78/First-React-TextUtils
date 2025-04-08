@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './App.css';
 import Alert from './Components/Alert';
 import About from './Components/About';
@@ -10,7 +8,7 @@ import TextForm from './Components/TextForm';
 
 
 function App() {
-  const [mode, setMode] = useState('light'); 
+  const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
 
   const showAlert = (message, type) => {
@@ -39,8 +37,8 @@ function App() {
       <Alert alert={alert} />
       <div className="container my-3">
         <Routes>
-          <Route path="/" element={<TextForm heading="Enter the text to analyze below" showAlert={showAlert} mode={mode} />} />
-          <Route path="/about" element={<About />} />
+          <Route exact path="/" element={<TextForm heading="Enter the text to analyze below" showAlert={showAlert} mode={mode} />} />
+          <Route exactpath="/about" element={<About />} />
         </Routes>
       </div>
     </>
