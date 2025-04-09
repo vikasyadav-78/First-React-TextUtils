@@ -49,16 +49,16 @@ export default function TextForm(props) {
                     {/* <label for="myBox" class="form-label">Example textarea/</label> */}
                     <textarea className="form-control" value={text} onChange={handdleOnChange} style={{backgroundColor : props.mode === 'dark' ? 'gray' : 'white' , color: props.mode === 'dark' ? 'white' : '#042743'}} id="myBox" rows="6"></textarea>
                 </div>
-                <button className='btn btn-primary my-2' onClick={handdleOnClick}>Convert To UpparCase</button>
-                <button className='btn btn-primary ms-4' onClick={handdleLoClick}>Convert To Lowercase</button>
-                <button className='btn btn-primary ms-4' onClick={clearTextBtn}>Clear Form</button>
-                <button className='btn btn-primary ms-4' onClick={handleCopy}>Copy Text</button>
-                <button className='btn btn-primary ms-4' onClick={handleExtraSpaces}>Formet Text</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={handdleOnClick}>Convert To UpparCase</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={handdleLoClick}>Convert To Lowercase</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={clearTextBtn}>Clear Form</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={handleCopy}>Copy Text</button>
+                <button className='btn btn-primary mx-1 my-1' onClick={handleExtraSpaces}>Formet Text</button>
             </div>
 
             <div className='container my-4' style={{color : props.mode === 'dark' ? 'white' : '#042743'}}>
                 <h1>Your Text Summary</h1>
-                <p>{text.split(" ").length} words and {text.length} Characters</p>
+                <p>{text.split(" ").filter((element) =>{return element.length !==0}).length} words and {text.length} Characters</p>
                 <p>{0.008 * text.split(' ').length} Mintus read </p>
             </div>
 
