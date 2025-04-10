@@ -14,7 +14,7 @@ export default function About(props) {
   return (
     <div className="container p-4" style={myStyle}>
       <h2>About Us</h2>
-      <p>This is the About page of your React app. You can write something about your app here.</p>
+      <p>This is the About page of our React app.</p>
     </div>
   );
 }
