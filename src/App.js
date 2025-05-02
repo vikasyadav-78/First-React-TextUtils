@@ -38,7 +38,7 @@ function App() {
       <div className="container my-3">
         <Routes>
           <Route exact path="/" element={<TextForm heading="Try TextUtils - Word Counter, Character Counter, Remove extra spaces" showAlert={showAlert} mode={mode} />} />
-          <Route exact path="/about" element={<About mode={mode} />}  />
+          <Route exact path="/about" element={<About mode={mode} />} />
         </Routes>
       </div>
     </>
